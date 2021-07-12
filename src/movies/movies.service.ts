@@ -39,7 +39,7 @@ export class MoviesService {
     });
   }
 
-  updateMovie(id: number, movieData: UpdateMovieDTO) {
+  updateMovie(id: number, movieData: UpdateMovieDTO): Movie {
     const movie = this.getOne(id);
     this.deleteMovie(id);
     this.movies.push({
